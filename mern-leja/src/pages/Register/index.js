@@ -1,10 +1,16 @@
 import React from 'react'
+import './register.scss'
 
 const Register = () => {
     return (
-        <div>
+        <div className="man-page">
+        <div className="left">
+            <p>Ilustrasi</p>
+        </div>
+        <div className="right">
             <p>Register Page</p>
         </div>
+    </div>
     )
 }
 
