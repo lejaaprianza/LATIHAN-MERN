@@ -1,8 +1,13 @@
 .main-page {
+  display: flex;
 }
 
 .left {
+  flex: 1;
+  background-color: red;
 }
 
 .right {
+  width: 460px;
+  background-color: blue;
 }
