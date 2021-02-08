@@ -1,6 +1,7 @@
 .main-page {
   display: flex;
   height: 100%;
+  box-sizing: border-box;
 }
 
 .left {
@@ -16,6 +17,16 @@
 
 .right {
   width: 460px;
-  background-color: blue;
+  background-color: white;
   height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d2d2d;
+  }
 }
