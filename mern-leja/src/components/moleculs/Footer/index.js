@@ -1,4 +1,5 @@
 import React from 'react'
+import { ICDiscord, ICFacebook, LogoLeja } from '../../../assets'
 
 const Footer = () => {
     return (
@@ -6,11 +7,12 @@ const Footer = () => {
 
         <div>
             <div>
-                {/* menit 3.33 */}
-                <img src="" />
-            <p>Logo Kabayan</p>
+                <img src={LogoLeja} />
             </div>
-            <p>Akun Media Sosial</p>
+            <div>
+                <img src={ICFacebook} alt ="facebook"/>
+                <img src={ICDiscord} alt ="facebook"/>
+            </div>
         </div>
         <div>
             <p>Copyright</p>
