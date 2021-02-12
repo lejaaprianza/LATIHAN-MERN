@@ -6,8 +6,9 @@ import DetailBlog from '../DetailBlog'
 import Home from '../Home'
 
 const MainApp = () => {
+    // menit 8.06, tutorial 10
     return (
-        <div> 
+        <div className="main-app-wrapper"> 
             <Header/>
             <Router>
                 <Switch>
