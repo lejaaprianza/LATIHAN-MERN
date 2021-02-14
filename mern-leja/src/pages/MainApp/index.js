@@ -4,12 +4,17 @@ import { Footer, Header } from '../../components'
 import CreateBlog from '../CreateBlog'
 import DetailBlog from '../DetailBlog'
 import Home from '../Home'
+import './mainApp.scss'
 
 const MainApp = () => {
     // menit 8.06, tutorial 10
     return (
         <div className="main-app-wrapper"> 
+            <div className="header-wrapper">
             <Header/>
+        </div>
+            <div className="content-wrapper">
+
             <Router>
                 <Switch>
                     <Route path="/create-blog">
@@ -23,7 +28,10 @@ const MainApp = () => {
                     </Route>
                 </Switch>
             </Router>
+            </div>
+            <div className="footer-wrapper">
             <Footer/>
+            </div>
         </div>
     )
 }
