@@ -4,5 +4,10 @@
   height: 100vh;
   .content-wrapper {
     flex: 1;
+    max-width: 1200px;
+    background-color: grey;
+    margin: auto;
+    width: 100%;
+    flex: 1s;
   }
 }

@@ -7,7 +7,6 @@ import Home from '../Home'
 import './mainApp.scss'
 
 const MainApp = () => {
-    // menit 8.06, tutorial 10
     return (
         <div className="main-app-wrapper"> 
             <div className="header-wrapper">
