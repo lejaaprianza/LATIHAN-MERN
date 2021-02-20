@@ -1,19 +1,26 @@
 import React from 'react'
-import {Button} from "../../components";
+import {BlogItem, Button, Gap} from "../../components";
+import './home.scss'
 // tutorial 11, menit 2.50
 const Home = () => {
     return (
-        <div>
-            <div>
+        <div className="home-page-wrapper">
+            <div className="create-wrapper">
                 <Button title="create blog"/>
             </div>
-            
-            <p>Blog Content</p>
-            <p>Blog Content</p>
-            <p>Blog Content</p>
-            <p>Blog Content</p>
-            <p>Blog Content</p>
-            <p>Pagination</p>
+            <Gap height={20}/>
+            <div className="content-wrapper">
+            <BlogItem/>
+            <BlogItem/>
+            <BlogItem/>
+            <BlogItem/>
+            </div>
+            <div className="pagination">
+                <Button title="Previous"/>
+                <Gap width={20}/>
+                <Button title="Next"/>
+            </div>
+                <Gap height={20}/>
 
         </div>
     )
