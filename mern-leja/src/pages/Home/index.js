@@ -1,7 +1,6 @@
 import React from 'react'
 import {BlogItem, Button, Gap} from "../../components";
 import './home.scss'
-// tutorial 11, menit 2.50
 const Home = () => {
     return (
         <div className="home-page-wrapper">
