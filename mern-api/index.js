@@ -3,12 +3,22 @@ const express = require('express')
 const app = express();
 const router= express.Router();
 
-router.use('/router', (req,res,next)=>{
-    console.log('url: ', req.originalUrl);
-    console.log('request: ', req.method);
+router.use('/products', (req,res,next)=>{
+    res.json({name: "Leja Aprianza",email: "lejaprianza@gmail.com"})
+    next()
+})
+
+router.use('/price', (req,res,next)=>{
+    res.json({price: 4000000})
+    next()
+})
+
+router.use('/customers', (req,res,next)=>{
+    res.json({title: "Customer"})
+    next()
 })
 
 app.use('/', router);
-// 21.20 - Membuat dan Memahami Basic Router, Request dan Response di NodeJS menit 3.39
+// 22.21 - Restructure Projects NodeJS_ExpressJS
 
 app.listen(4000);
