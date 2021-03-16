@@ -3,10 +3,6 @@ const express = require('express')
 const app = express();
 const router= express.Router();
 
-router.use('/products', (req,res,next)=>{
-    res.json({name: "Leja Aprianza",email: "lejaprianza@gmail.com"})
-    next()
-})
 
 router.use('/price', (req,res,next)=>{
     res.json({price: 4000000})
