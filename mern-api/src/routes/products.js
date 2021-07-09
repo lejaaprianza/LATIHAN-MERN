@@ -6,11 +6,9 @@ const productsController = require('../controllers/products')
 //CREATE POST
 router.post('/product', productsController.createProduct)
 
-// E:\kuliah\javascript\react\prawito-hudoro\MERN Tutorial 22.21 - Restructure Projects NodeJS_ExpressJS 6.05
-
+// E:\kuliah\javascript\react\prawito-hudoro\MERN Tutorial 22.22 
 
 //Read -> GET
 router.get('/products', productsController.getAllProducts)
-
 
 module.exports = router;
