@@ -16,7 +16,7 @@ exports.getAllProducts = (req, res, next) => {
   res.json({
     message: "Get All Products Success",
     data: [
-      {
+      { saya ilang
         id: 1,
         name: "Sari Gandum",
         price: 8000,
