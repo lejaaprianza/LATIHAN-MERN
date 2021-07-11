@@ -22,6 +22,7 @@ exports.getAllProducts = (req, res, next) => {
         price: 8000,
       },
     ],
+    s,
   });
   next();
 };
