@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
-const productsRoutes = require("./src/routes/products");
+// const productsRoutes = require("./src/routes/products");
+const authRoutes = require("./src/routes/auth");
+const blogRoutes = require("./src/routes/blog");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,7 +17,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/v1/", productsRoutes);
+// app.use("/v1/customer", productsRoutes);
+app.use("/v1/auth", authRoutes);
+app.use("/v1/blog", blogRoutes);
 
 app.listen(4000);
 
