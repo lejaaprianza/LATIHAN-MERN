@@ -21,6 +21,8 @@ router.put(
   blogController.updateBlogPost
 );
 router.get("/posts", blogController.getAllBlogPost);
+// router.get("/posts/page=1&perPage=5", blogController.getAllBlogPost);
 router.get("/post/:postId", blogController.getBlogPostById);
+router.delete("/post/:postId", blogController.deleteBlogPost);
 
 module.exports = router;
