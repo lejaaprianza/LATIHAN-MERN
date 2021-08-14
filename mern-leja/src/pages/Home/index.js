@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react";
-import { BlogItem, Button, Gap } from "../../components";
-import "./home.scss";
-import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from "react"
+import { BlogItem, Button, Gap } from "../../components"
+import "./home.scss"
+import { useHistory } from "react-router-dom"
 // import Axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
-import { setDataBlog } from "../../config/Redux/action";
-import { confirmAlert } from "react-confirm-alert";
-import "react-confirm-alert/src/react-confirm-alert.css";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux"
+import { setDataBlog } from "../../config/Redux/action"
+import { confirmAlert } from "react-confirm-alert"
+import "react-confirm-alert/src/react-confirm-alert.css"
+import axios from "axios"
 const Home = () => {
   // const [dataBlog, setDataBlog] = useState([]);
-  const [counter, setCounter] = useState(1);
-  const { dataBlog, page } = useSelector((state) => state.HomeReducer);
+  const [counter, setCounter] = useState(1)
+  const { dataBlog, page } = useSelector((state) => state.HomeReducer)
   //   const { dataBlog, name } = useSelector((state) => state);
-  console.log("page: ", page);
-  const dispatch = useDispatch();
+  console.log("page: ", page)
+  const dispatch = useDispatch()
   //   console.log("state global", dataBlog);
   //   console.log(name);
   useEffect(() => {
-    dispatch(setDataBlog(counter)); // setTimeout(() => {
+    dispatch(setDataBlog(counter)) // setTimeout(() => {
     //   dispatch({ type: "UPDATE_NAME" });
     // }, 10000);
-  }, [counter, dispatch]);
+  }, [counter, dispatch])
 
-  const history = useHistory();
+  const history = useHistory()
 
   const previous = () => {
-    setCounter(counter <= 1 ? 1 : counter - 1);
-    console.log(counter);
-  };
+    setCounter(counter <= 1 ? 1 : counter - 1)
+    console.log(counter)
+  }
   const confirmDelete = (id) => {
     confirmAlert({
       title: "Confirm to delete",
@@ -40,11 +40,11 @@ const Home = () => {
             axios
               .delete(`http://localhost:4000/v1/blog/post/${id}`)
               .then((res) => {
-                console.log("done ", res.data);
-                window.location.reload();
+                console.log("done ", res.data)
+                window.location.reload()
               })
               .catch((err) => {
-                console.log("err ", err);
+                console.log("err ", err)
               }),
         },
         {
@@ -52,14 +52,14 @@ const Home = () => {
           onClick: () => alert("tidak setuju"),
         },
       ],
-    });
-  };
+    })
+  }
 
   const next = () => {
-    setCounter(counter === page.totalPage ? page.totalPage : counter + 1);
+    setCounter(counter === page.totalPage ? page.totalPage : counter + 1)
     // setCounter(counter + 1);
-    console.log(counter);
-  };
+    console.log(counter)
+  }
   return (
     <div className="home-page-wrapper">
       <div className="create-wrapper">
@@ -67,8 +67,8 @@ const Home = () => {
           title="create blog"
           onClick={() =>
             setTimeout(() => {
-              history.push("/create-blog");
-              window.location.reload();
+              history.push("/create-blog")
+              window.location.reload()
             }, 100)
           }
         />
@@ -87,7 +87,7 @@ const Home = () => {
               _id={blog._id}
               onDelete={confirmDelete}
             />
-          );
+          )
         })}
       </div>
       <div className="pagination">
@@ -99,7 +99,7 @@ const Home = () => {
       </div>
       <Gap height={20} />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

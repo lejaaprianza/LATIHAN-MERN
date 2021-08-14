@@ -1,14 +1,14 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React from "react"
+import { useHistory } from "react-router-dom"
 // import { RegisterBg } from "../../../assets";
-import { Button, Gap } from "../../atoms";
-import "./blogItem.scss";
+import { Button, Gap } from "../../atoms"
+import "./blogItem.scss"
 
-const BlogItem = ({ image, title, name, date, body, _id, onDelete }) => {
-  const history = useHistory();
+const BlogItem = ({ title, name, date, body, _id, onDelete }) => {
+  const history = useHistory()
   return (
     <div className="blog-item">
-      <img className="image-thumb" src={image} alt="post" />
+      {/* <img className="image-thumb" src={image} alt="post" /> */}
       <div className="content-detail">
         <div className="title-wrapper">
           <p className="title">{title}</p>
@@ -36,7 +36,7 @@ const BlogItem = ({ image, title, name, date, body, _id, onDelete }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BlogItem;
+export default BlogItem
