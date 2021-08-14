@@ -38,7 +38,7 @@ const Home = () => {
           label: "Yes",
           onClick: () =>
             axios
-              .delete(`http://localhost:4000/v1/blog/post/${id}`)
+              .delete(`https://mernleja.herokuapp.com/v1/blog/post/${id}`)
               .then((res) => {
                 console.log("done ", res.data)
                 window.location.reload()
@@ -93,7 +93,9 @@ const Home = () => {
       <div className="pagination">
         <Button title="Previous" onClick={previous} />
         <Gap width={20} />
-        <p className="text-page">{counter}/3 </p>
+        <p className="text-page">
+          {counter}/{page.totalPage}{" "}
+        </p>
         <Gap width={20} />
         <Button title="Next" onClick={next} />
       </div>

@@ -1,10 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Footer, Header } from "../../components";
-import CreateBlog from "../CreateBlog";
-import DetailBlog from "../DetailBlog";
-import Home from "../Home";
-import "./mainApp.scss";
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { Footer, Header } from "../../components"
+import CreateBlog from "../CreateBlog"
+import DetailBlog from "../DetailBlog"
+import Home from "../Home"
+import "./mainApp.scss"
 
 const MainApp = () => {
   return (
@@ -31,7 +31,7 @@ const MainApp = () => {
         <Footer />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainApp;
+export default MainApp
