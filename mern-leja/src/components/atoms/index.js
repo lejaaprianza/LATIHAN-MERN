@@ -1,8 +1,8 @@
-import Input from './Input'
-import Button from './Button'
-import Gap from "./Gap"
-import Link from "./Link";
-import Upload from "./Upload";
-import TextArea from "./TextArea";
+import Input from "./Input/index"
+import Button from "./Button/index"
+import Gap from "./Gap/index"
+import Link from "./Link/index"
+import Upload from "./Upload/index"
+import TextArea from "./TextArea/index"
 
-export {Input,Button,Gap,Link, Upload, TextArea}
+export { Input, Button, Gap, Link, Upload, TextArea }
